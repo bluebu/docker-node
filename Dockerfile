@@ -30,10 +30,10 @@ RUN apk --update --no-cache \
   && rm /var/cache/apk/* \
 
   # optipng
-  && curl -L -O http://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-$OPTIPNG_VERSION/optipng-$OPTIPNG_VERSION.tar.gz \
-  && tar zxf optipng-$OPTIPNG_VERSION.tar.gz \
-  && cd optipng-$OPTIPNG_VERSION \
-  && ./configure && make && make install \
-  && cd .. \
+  # && curl -L -O http://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-$OPTIPNG_VERSION/optipng-$OPTIPNG_VERSION.tar.gz \
+  # && tar zxf optipng-$OPTIPNG_VERSION.tar.gz \
+  # && cd optipng-$OPTIPNG_VERSION \
+  # && ./configure && make && make install \
+  # && cd .. \
 
 RUN npm install -g gulp
