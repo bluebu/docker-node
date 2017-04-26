@@ -9,9 +9,25 @@ ENV \
 #------------------------------------------------------------------------------
 RUN echo "@edge-community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
 
-RUN \
-  apk --update --upgrade add git curl tar bash openssh-client libjpeg-turbo-utils openjpeg-dev libjpeg-turbo-dev freetype-dev gifsicle@edge-community && \
-  rm /var/cache/apk/* \
+# libjpeg-turbo-utils openjpeg-dev libjpeg-turbo-dev freetype-dev gifsicle@edge-community 
+RUN apk --update --no-cache \
+    add  \
+    tar bash openssh-client
+    automake \
+    git \
+    alpine-sdk  \
+    nasm  \
+    autoconf  \
+    build-base \
+    zlib \
+    zlib-dev \
+    libpng \
+    libpng-dev\
+    libwebp \
+    libwebp-dev \
+    libjpeg-turbo \
+    libjpeg-turbo-dev \
+  && rm /var/cache/apk/* \
 
   # optipng
   && curl -L -O http://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-$OPTIPNG_VERSION/optipng-$OPTIPNG_VERSION.tar.gz \
