@@ -27,6 +27,9 @@ RUN apk --update --no-cache \
     libwebp-dev \
     libjpeg-turbo \
     libjpeg-turbo-dev \
+    libjpeg-turbo-utils \
+    gifsicle@edge-community \
+    optipng@edge-community \
   && rm /var/cache/apk/*
 
   # optipng
