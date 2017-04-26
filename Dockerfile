@@ -12,7 +12,7 @@ RUN echo "@edge-community http://dl-cdn.alpinelinux.org/alpine/edge/community" >
 # libjpeg-turbo-utils openjpeg-dev libjpeg-turbo-dev freetype-dev gifsicle@edge-community 
 RUN apk --update --no-cache \
     add  \
-    tar bash openssh-client
+    tar bash openssh-client \
     automake \
     git \
     alpine-sdk  \
