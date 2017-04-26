@@ -36,4 +36,4 @@ RUN apk --update --no-cache \
   # && ./configure && make && make install \
   # && cd .. \
 
-RUN npm install -g gulp
+RUN npm update -g npm && npm install -g gulp gulp-imagemin
