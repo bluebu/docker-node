@@ -6,5 +6,5 @@ MAINTAINER bluebu <bluebuwang@gmail.com>
 #------------------------------------------------------------------------------
 
 RUN \
-  apk --update --upgrade add curl tar bash openssh-client gifsicle libjpeg-turbo-utils optipng && \
+  apk --update --upgrade add curl tar bash openssh-client libjpeg-turbo-utils && \
   rm /var/cache/apk/*
