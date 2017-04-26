@@ -27,7 +27,7 @@ RUN apk --update --no-cache \
     libwebp-dev \
     libjpeg-turbo \
     libjpeg-turbo-dev \
-  && rm /var/cache/apk/* \
+  && rm /var/cache/apk/*
 
   # optipng
   # && curl -L -O http://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-$OPTIPNG_VERSION/optipng-$OPTIPNG_VERSION.tar.gz \
