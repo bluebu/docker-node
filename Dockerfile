@@ -39,4 +39,4 @@ RUN apk --update --no-cache \
   # && ./configure && make && make install \
   # && cd .. \
 
-RUN npm install -g gulp gulp-imagemin
+RUN npm install -g gulp gulp-imagemin gifsicle
