@@ -41,5 +41,5 @@ RUN apk --update --no-cache \
   # && ./configure && make && make install \
   # && cd .. \
 
-RUN mkdir -p /npm/global && chown root:root -hR /npm/global \
+RUN mkdir -p /npm/global \
   && npm install -g gifsicle jpegtran-bin optipng-bin gulp gulp-imagemin
