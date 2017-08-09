@@ -44,6 +44,7 @@ RUN apk --update --no-cache \
 # RUN mkdir -p /npm/global \
 #   && npm install -g gifsicle jpegtran-bin optipng-bin gulp gulp-imagemin
 
+RUN npm install -g gulp gulp-imagemin
 
-RUN sudo chown -R $(whoami) $(npm config get prefix) \
-    && npm install -g gifsicle jpegtran-bin optipng-bin gulp gulp-imagemin
+# RUN sudo chown -R $(whoami) $(npm config get prefix) \
+#     && npm install -g gifsicle jpegtran-bin optipng-bin gulp gulp-imagemin
