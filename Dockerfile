@@ -1,8 +1,10 @@
 FROM node:alpine
 MAINTAINER bluebu <bluebuwang@gmail.com>
 
+# https://docs.npmjs.com/getting-started/fixing-npm-permissions
 ENV \
-  OPTIPNG_VERSION=0.7.5
+  OPTIPNG_VERSION=0.7.5 \
+  NPM_CONFIG_PREFIX=/npm/global
 
 #------------------------------------------------------------------------------
 # Environment variables:
@@ -39,4 +41,5 @@ RUN apk --update --no-cache \
   # && ./configure && make && make install \
   # && cd .. \
 
-RUN sudo npm install -g gifsicle jpegtran-bin optipng-bin gulp gulp-imagemin
+RUN mkdir -p /npm/global && chown root:root -hR /npm/global \
+  && npm install -g gifsicle jpegtran-bin optipng-bin gulp gulp-imagemin
