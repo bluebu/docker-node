@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM node:alpine
 MAINTAINER bluebu <bluebuwang@gmail.com>
 
 ENV \
@@ -39,4 +39,4 @@ RUN apk --update --no-cache \
   # && ./configure && make && make install \
   # && cd .. \
 
-RUN npm install -g gifsicle jpegtran-bin optipng-bin gulp gulp-imagemin
+RUN sudo npm install -g gifsicle jpegtran-bin optipng-bin gulp gulp-imagemin
