@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:7-alpine
 MAINTAINER bluebu <bluebuwang@gmail.com>
 
 # https://docs.npmjs.com/getting-started/fixing-npm-permissions
